@@ -3,38 +3,66 @@
 <head>
 	<meta charset="UTF-8"> 
 	<title>Le biau jardin</title>
+	<link href='https://fonts.googleapis.com/css?family=Gentium+Basic' rel='stylesheet' type='text/css'>
 	<style>
 		/*palette de couleurs : http://paletton.com/palette.php?uid=30u0u0kw0w0jvDaoOy4y4oODajv
 		orange : #FF7400;
 		bleu : #1240AB;
 		vert : #00CC00;
 		*/
+
 		@font-face {
 			font-family: hobo;
 			src: url(Hobo.ttf);
 		}
+
 		body {
 			margin-top:50px;
 			background-image: url(fond-kraft.jpg);
+			font-family: 'Gentium Basic', serif;
+		}
+
+		h1, h2, h3 {
+			color:#082568;
+			margin-top: 10px;
+			margin-bottom: 5px;
+			font-family: 'hobo',serif;
+		}
+
+		h2 {
+			font-size:1em;
+		}
+
+		h3{
+			font-size:0.8em;
+		}
+
+		div {display:inline-block;}
+
+/***************************************************************************************
+header
+***************************************************************************************/
+		header { 
+			display:flex;
 		}
 
 
 		.etiquette{
-			font-family: 'hobo';
+			font-family: 'hobo',serif;
 			background: #FDEED7 url('ane.png') no-repeat left center;
 			border-radius:100px;
-			border:1px solid black;
+			border:1px solid #764d1b;
 			padding:20px;
 			padding-left:150px;			
-			padding-right:50px;			
-			min-height:200px;
 			margin:auto;
 			font-family: hobo;
-			width: 300px;
+			min-width: 300px;
 			text-align:center;
 			vertical-align: top;
 
 		}
+
+		
 
 		.etiquette h1 {
 			color:#1240AB;
@@ -46,15 +74,16 @@
 			color:#FF7400;
 		}
 
-		header .menu{
+		 .menu{
 			
-			width:calc((100% - 520px) / 2);			
+			width:calc((100% - 520px) / 2);		
 			vertical-align: top;
 			min-width:100px;
 			margin-top: -25px;
 		}
 
-		header .menu li{
+header ul{margin-top:40px;}
+		 .menu li{
 			font-family: 'hobo';
 			text-align:center;
 			font-size: 1.2em;
@@ -64,9 +93,9 @@
 			
 		}
 
-		/*header .menu div{height:100px;}*/
 
-		div {display:inline-block;}
+
+
 
 		.vert {
 			color:#38A741;
@@ -75,7 +104,7 @@
 
 		.orange{
 			color:#FF7400;
-			text-shadow: #9b4600 1px 1px, #9b4600 -1px 1px, #9b4600 -1px -1px, #9b4600 1px -1px;
+			text-shadow: #4c2200 1px 1px, #4c2200 -1px 1px, #4c2200 -1px -1px, #4c2200 1px -1px;
 
 		}
 
@@ -97,30 +126,64 @@
 			transform: rotate(355deg);
 		}
 
+		@media screen and (max-width:936px){
+			.menu{ order:1;}
+			header{flex-wrap:wrap;}
+			.rotate10{
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			.rotate5{
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			.rotate350{
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			.rotate355{
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			.menu {width:49%;}
+		}
+
+/***************************************************************************************
+contenu
+***************************************************************************************/
 		article {
 			font-size: 1.2em;
+			margin-left:20px;
+			margin-right:20px;
+			text-align:justify;
 
+		}
+		.lettrine:first-letter{
+		  float:left;
+		  font-size: 3em;
+		  padding-right:0.05em;
 		}
 
 		.colonne{
 			vertical-align : top;width:49%;
 		}
+		.colonne:first{
+			padding-right:1%;
 
-		h1, h2, h3 {
-			color:#082568;
-			margin-top: 10px;
-			margin-bottom: 5px;
 		}
-
 
 		a {
 			text-decoration: none;
 		}
+/***************************************************************************************
+footer
+***************************************************************************************/
+		footer {
+			text-align: center;
+		}
 
-
-
-		</style>
-	</head>
+	</style>
+</head>
 	<body>
 		<header>
 			<div class="menu">
@@ -162,9 +225,11 @@
 
 
 
-		<article id="description">
-			<p>
-				L'histoire commence en 2004 par quelques plantations au milieu d'une prairie. <br>Aujourd'hui on déambule entre les zones de cultures légumières et aromatiques, les vergers-poulailler, on se met à l'ombre des bouleaux, frênes, sureau, on fait la sieste, on longe le parc des ânes et des biquettes, on s'arrête gratter leur museau, on passe devant la serre, les séchoirs, on hume l'odeur des plantes séchées, on prends le temps, on pique-nique sur une table de jardin.<br>
+		<article>
+			<p class="lettrine">
+				L'histoire commence en 2004 par quelques plantations au milieu d'une prairie. <br>Aujourd'hui on déambule entre les zones de cultures légumières et aromatiques, les vergers-poulailler, on se met à l'ombre des bouleaux, frênes, sureau, on fait la sieste, on longe le parc des ânes et des biquettes, on s'arrête gratter leur museau, on passe devant la serre, les séchoirs, on hume l'odeur des plantes séchées, on prends le temps, on pique-nique sur une table de jardin.
+			</p>
+			<p class="lettrine">
 				Le Biau Jardin est un lieu de vie où se mêlent légumes, plantes aromatiques et fruitiers, lieu d'activités agricoles (Agriculture biologique et mention Nature et progrès) et d'accueil.<br>
 				Il est situé en zone inondable sur une terre d'alluvion entre deux bras de la Loire, en limite de hameau, dans un paysage de prairies et champs ouverts, de haies de bords de rivière et de boires boisées.
 			</p>
@@ -174,37 +239,36 @@
 				Suivant la saison.<br>
 				En vente sur place. <br>
 				Ici on accepte la monnaie locale, la <a href="http://www.lamuse-monnaie.fr/">muse</a>.
-				<h3>JUS DE FRUITS:</h3>
+				<h3>JUS DE FRUITS</h3>
 				jus de pomme, de raisin<br>
 				3€ le litre et 2,50€ la bouteille
-
-				<h3>TISANES </h3> 
-				Hépatante, Indigène, Costaude, P'tit dèj, Anisée, Nuit étoilée, Inspiration 3€ le sachet
+				<h3>TISANES</h3> 
+				Hépatante, Indigène, Costaude, P'tit dèj, Anisée, Nuit étoilée, Inspiration<br>3€ le sachet
 
 				<h3>PESTOS</h3> 
 				Basilic, fenouil, persil 3,50€ le pot
 
 				<h3>"CHAMPAGNES DES FEES" </h3>
-				surette, rosette 3€ la bouteille
+				Limonade de sureau : surette, rosette 3€ la bouteille
 
-				<h3>VINAIGRE </h3>
-				de pomme
+				<h3>VINAIGRE</h3>
+				De pomme
 			</div>
 			<div id="accueil" class="colonne">
 				<h2>ACCUEIL PAYSAN</h2>
 				<h3>CHAMBRE D’HÔTE ET TABLE PAYSANNE</h3>
-				une chambre pour deux personnes (+ enfants possibles), équipée de toilettes sèches, 45€<br>
-				repas végétarien avec les produits du jardin 12€
-				
-
+				Une chambre pour deux personnes (+ enfants possibles), équipée de toilettes sèches : 45€<br>
+				Repas végétarien avec les produits du jardin : 12€
 				<h3>PIQUE-NIQUE ET GOÛTER AU JARDIN</h3>
-				avec les produits du jardin
+				Avec les produits du jardin
 				<h3>ATELIERS</h3>
-				autour du thème du jardin. A définir ensemble.
-
-
+				Autour du thème du jardin. A définir ensemble.
 				<h3>VISITE DU JARDIN</h3>
 			</div>
 		</article>
+		<footer>
+			Mentions légales
+		</footer>
+
 	</body>
 	</html>

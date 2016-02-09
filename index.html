@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Le biau jardin</title>
 	<link href='https://fonts.googleapis.com/css?family=Gentium+Basic' rel='stylesheet' type='text/css'>
 	<style>
@@ -39,9 +41,9 @@
 
 		div {display:inline-block;}
 
-/***************************************************************************************
-header
-***************************************************************************************/
+		/***************************************************************************************
+		header
+		***************************************************************************************/
 		header { 
 			display:flex;
 		}
@@ -56,13 +58,13 @@ header
 			padding-left:150px;			
 			margin:auto;
 			font-family: hobo;
-			min-width: 300px;
+			width: 300px;
 			text-align:center;
 			vertical-align: top;
 
 		}
 
-		
+
 
 		.etiquette h1 {
 			color:#1240AB;
@@ -74,27 +76,25 @@ header
 			color:#FF7400;
 		}
 
-		 .menu{
-			
+		.menu{
+
 			width:calc((100% - 520px) / 2);		
 			vertical-align: top;
 			min-width:100px;
 			margin-top: -25px;
 		}
 
-header ul{margin-top:40px;}
-		 .menu li{
+
+
+		header ul{margin-top:40px;}
+		.menu li{
 			font-family: 'hobo';
 			text-align:center;
 			font-size: 1.2em;
-			display:block;
 			width:100%;
-			height:75px;
-			
+			min-height:75px;
+    		display: inline-block;
 		}
-
-
-
 
 
 		.vert {
@@ -108,7 +108,7 @@ header ul{margin-top:40px;}
 
 		}
 
-		
+
 		.rotate10{
 			-webkit-transform: rotate(10deg);
 			transform: rotate(10deg);
@@ -126,8 +126,49 @@ header ul{margin-top:40px;}
 			transform: rotate(355deg);
 		}
 
+
+		/***************************************************************************************
+		contenu
+		***************************************************************************************/
+		article {
+			font-size: 1.2em;
+			margin-left:20px;
+			margin-right:20px;
+			text-align:justify;
+
+		}
+		.lettrine:first-letter{
+			float:left;
+			font-size: 3em;
+			padding-right:0.05em;
+		}
+
+		.colonne{
+			vertical-align : top;width:49%;
+		}
+		.colonne:first{
+			padding-right:1%;
+
+		}
+
+		a {
+			text-decoration: none;
+		}
+		/***************************************************************************************
+		footer
+		***************************************************************************************/
+		footer {
+			text-align: center;
+		}
+
+
+		@media screen and (min-width:937px){
+			.left {order:1;}
+			.etiquette{order:2;}
+			.right{order:3;}
+		}
+
 		@media screen and (max-width:936px){
-			.menu{ order:1;}
 			header{flex-wrap:wrap;}
 			.rotate10{
 				-webkit-transform: rotate(0deg);
@@ -146,129 +187,108 @@ header ul{margin-top:40px;}
 				transform: rotate(0deg);
 			}
 			.menu {width:49%;}
+
+			article{ text-align: left;}
 		}
 
-/***************************************************************************************
-contenu
-***************************************************************************************/
-		article {
-			font-size: 1.2em;
-			margin-left:20px;
-			margin-right:20px;
-			text-align:justify;
-
-		}
-		.lettrine:first-letter{
-		  float:left;
-		  font-size: 3em;
-		  padding-right:0.05em;
-		}
-
-		.colonne{
-			vertical-align : top;width:49%;
-		}
-		.colonne:first{
-			padding-right:1%;
-
-		}
-
-		a {
-			text-decoration: none;
-		}
-/***************************************************************************************
-footer
-***************************************************************************************/
-		footer {
-			text-align: center;
+		@media screen and (max-width:480px){
+			.colonne{
+				width:100%;
+			}
+			.etiquette{
+			background: #FDEED7 ;
+			padding-left:20px;
+			}
 		}
 
 	</style>
 </head>
-	<body>
-		<header>
-			<div class="menu">
-				<ul>
-					<li class="rotate10"><a href="#accueil" class="vert">Chambre d'hôte et table végétarienne</a></li>
+<body>
+	<header>
+		
+		<div class="etiquette">
 
-					<li class="rotate5"><a href="#accueil" class="orange">Ateliers</a></li>
-
-					<li class="rotate355"><a href="#accueil" class="vert">Visite du jardin</a></li>
-
-					<li class="rotate350"><a href="#accueil" class="orange">Pique-nique végétarien et goûter au jardin</a></li>
-				</ul>
-			</div>
-			<div class="etiquette">
-
-				<h1>Le Biau Jardin</h1>
-				<p>Solenne Briffaud et Bruno Papin<br>
-					49130 Saint Jean de la croix<br>
-					<span id="tel">06 52 51 14 07</span>
-				</p>
-				<img src="logo_AB.jpg" alt="logo AB">
-				<img src="logo_eu_AB.jpg" alt="logo européen AB">
-				<img src="nature_progres.jpg" alt="logo nature et progrès">
-
-			</div> 
-			<div class="menu">
-				<ul>
-					<li class="rotate350"><a href="#produits" class="orange">Légumes</a></li>
-
-					<li class="rotate355"><a href="#produits" class="vert">Jus de pomme, tisanes</a></li>
-
-					<li class="rotate5"><a href="#produits" class="orange">Plans</a></li>
-
-					<li class="rotate10"><a href="#produits" class="vert">Pestos, vinaigres</a></li>
-				</ul>
-
-			</div>
-		</header>
-
-
-
-		<article>
-			<p class="lettrine">
-				L'histoire commence en 2004 par quelques plantations au milieu d'une prairie. <br>Aujourd'hui on déambule entre les zones de cultures légumières et aromatiques, les vergers-poulailler, on se met à l'ombre des bouleaux, frênes, sureau, on fait la sieste, on longe le parc des ânes et des biquettes, on s'arrête gratter leur museau, on passe devant la serre, les séchoirs, on hume l'odeur des plantes séchées, on prends le temps, on pique-nique sur une table de jardin.
+			<h1>Le Biau Jardin</h1>
+			<p>Solenne Briffaud et Bruno Papin<br>
+				49130 Saint Jean de la croix<br>
+				<span id="tel">06 52 51 14 07</span>
 			</p>
-			<p class="lettrine">
-				Le Biau Jardin est un lieu de vie où se mêlent légumes, plantes aromatiques et fruitiers, lieu d'activités agricoles (Agriculture biologique et mention Nature et progrès) et d'accueil.<br>
-				Il est situé en zone inondable sur une terre d'alluvion entre deux bras de la Loire, en limite de hameau, dans un paysage de prairies et champs ouverts, de haies de bords de rivière et de boires boisées.
-			</p>
+			<img src="logo_AB.jpg" alt="logo AB">
+			<img src="logo_eu_AB.jpg" alt="logo européen AB">
+			<img src="nature_progres.jpg" alt="logo nature et progrès">
 
-			<div id="produits" class="colonne">
-				<h2>PRODUITS PAYSANS</h2>
-				Suivant la saison.<br>
-				En vente sur place. <br>
-				Ici on accepte la monnaie locale, la <a href="http://www.lamuse-monnaie.fr/">muse</a>.
-				<h3>JUS DE FRUITS</h3>
-				jus de pomme, de raisin<br>
-				3€ le litre et 2,50€ la bouteille
-				<h3>TISANES</h3> 
-				Hépatante, Indigène, Costaude, P'tit dèj, Anisée, Nuit étoilée, Inspiration<br>3€ le sachet
+		</div> 
+		<div class="menu left">
+			<ul>
+				<li class="rotate10"><a href="#accueil" class="vert">Chambre d'hôte et table végétarienne</a></li>
 
-				<h3>PESTOS</h3> 
-				Basilic, fenouil, persil 3,50€ le pot
+				<li class="rotate5"><a href="#accueil" class="orange">Ateliers</a></li>
 
-				<h3>"CHAMPAGNES DES FEES" </h3>
-				Limonade de sureau : surette, rosette 3€ la bouteille
+				<li class="rotate355"><a href="#accueil" class="vert">Visite du jardin</a></li>
 
-				<h3>VINAIGRE</h3>
-				De pomme
-			</div>
-			<div id="accueil" class="colonne">
-				<h2>ACCUEIL PAYSAN</h2>
-				<h3>CHAMBRE D’HÔTE ET TABLE PAYSANNE</h3>
-				Une chambre pour deux personnes (+ enfants possibles), équipée de toilettes sèches : 45€<br>
-				Repas végétarien avec les produits du jardin : 12€
-				<h3>PIQUE-NIQUE ET GOÛTER AU JARDIN</h3>
-				Avec les produits du jardin
-				<h3>ATELIERS</h3>
-				Autour du thème du jardin. A définir ensemble.
-				<h3>VISITE DU JARDIN</h3>
-			</div>
-		</article>
-		<footer>
-			Mentions légales
-		</footer>
+				<li class="rotate350"><a href="#accueil" class="orange">Pique-nique végétarien et goûter au jardin</a></li>
+			</ul>
+		</div>
+		<div class="menu right">
+			<ul>
+				<li class="rotate350"><a href="#produits" class="orange">Légumes</a></li>
 
-	</body>
-	</html>
+				<li class="rotate355"><a href="#produits" class="vert">Jus de pomme, tisanes</a></li>
+
+				<li class="rotate5"><a href="#produits" class="orange">Plans</a></li>
+
+				<li class="rotate10"><a href="#produits" class="vert">Pestos, vinaigres</a></li>
+			</ul>
+
+		</div>
+	</header>
+
+
+
+	<article>
+		<p class="lettrine">
+			L'histoire commence en 2004 par quelques plantations au milieu d'une prairie. <br>Aujourd'hui on déambule entre les zones de cultures légumières et aromatiques, les vergers-poulailler, on se met à l'ombre des bouleaux, frênes, sureau, on fait la sieste, on longe le parc des ânes et des biquettes, on s'arrête gratter leur museau, on passe devant la serre, les séchoirs, on hume l'odeur des plantes séchées, on prends le temps, on pique-nique sur une table de jardin.
+		</p>
+		<p class="lettrine">
+			Le Biau Jardin est un lieu de vie où se mêlent légumes, plantes aromatiques et fruitiers, lieu d'activités agricoles (Agriculture biologique et mention Nature et progrès) et d'accueil.<br>
+			Il est situé en zone inondable sur une terre d'alluvion entre deux bras de la Loire, en limite de hameau, dans un paysage de prairies et champs ouverts, de haies de bords de rivière et de boires boisées.
+		</p>
+
+		<div id="produits" class="colonne">
+			<h2>PRODUITS PAYSANS</h2>
+			Suivant la saison.<br>
+			En vente sur place. <br>
+			Ici on accepte la monnaie locale, la <a href="http://www.lamuse-monnaie.fr/">muse</a>.
+			<h3>JUS DE FRUITS</h3>
+			jus de pomme, de raisin<br>
+			3€ le litre et 2,50€ la bouteille
+			<h3>TISANES</h3> 
+			Hépatante, Indigène, Costaude, P'tit dèj, Anisée, Nuit étoilée, Inspiration<br>3€ le sachet
+
+			<h3>PESTOS</h3> 
+			Basilic, fenouil, persil 3,50€ le pot
+
+			<h3>"CHAMPAGNES DES FEES" </h3>
+			Limonade de sureau : surette, rosette 3€ la bouteille
+
+			<h3>VINAIGRE</h3>
+			De pomme
+		</div>
+		<div id="accueil" class="colonne">
+			<h2>ACCUEIL PAYSAN</h2>
+			<h3>CHAMBRE D’HÔTE ET TABLE PAYSANNE</h3>
+			Une chambre pour deux personnes (+ enfants possibles), équipée de toilettes sèches : 45€<br>
+			Repas végétarien avec les produits du jardin : 12€
+			<h3>PIQUE-NIQUE ET GOÛTER AU JARDIN</h3>
+			Avec les produits du jardin
+			<h3>ATELIERS</h3>
+			Autour du thème du jardin. À définir ensemble.
+			<h3>VISITE DU JARDIN</h3>
+		</div>
+	</article>
+	<footer>
+		Mentions légales
+	</footer>
+
+</body>
+</html>

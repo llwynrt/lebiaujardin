@@ -6,6 +6,7 @@
 
 	<title>Le biau jardin</title>
 	<link href='https://fonts.googleapis.com/css?family=Gentium+Basic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://static.accueil-paysan.com/js/lib/leaflet/leaflet.css" />
 	<style>
 		/*palette de couleurs : http://paletton.com/palette.php?uid=30u0u0kw0w0jvDaoOy4y4oODajv
 		orange : #FF7400;
@@ -48,6 +49,7 @@
 			display:flex;
 		}
 
+		header ul{margin-top:40px;}
 
 		.etiquette{
 			font-family: 'hobo',serif;
@@ -64,8 +66,6 @@
 
 		}
 
-
-
 		.etiquette h1 {
 			color:#1240AB;
 			text-shadow: 1px 1px 1px black;
@@ -77,25 +77,20 @@
 		}
 
 		.menu{
-
 			width:calc((100% - 520px) / 2);		
 			vertical-align: top;
 			min-width:100px;
 			margin-top: -25px;
 		}
-
-
-
-		header ul{margin-top:40px;}
+	
 		.menu li{
 			font-family: 'hobo';
 			text-align:center;
 			font-size: 1.2em;
 			width:100%;
 			min-height:75px;
-    		display: inline-block;
+    	display: inline-block;
 		}
-
 
 		.vert, #produits h2 {
 			color:#38A741;
@@ -107,7 +102,6 @@
 			text-shadow: #4c2200 1px 1px, #4c2200 -1px 1px, #4c2200 -1px -1px, #4c2200 1px -1px;
 
 		}
-
 
 		.rotate10{
 			-webkit-transform: rotate(10deg);
@@ -126,8 +120,6 @@
 			transform: rotate(355deg);
 		}
 
-
-
 		/***************************************************************************************
 		contenu
 		***************************************************************************************/
@@ -138,6 +130,7 @@
 			text-align:justify;
 
 		}
+
 		.lettrine:first-letter{
 			float:left;
 			font-size: 3em;
@@ -145,8 +138,10 @@
 		}
 
 		.colonne{
-			vertical-align : top;width:49%;
+			vertical-align : top;
+			width:49%;
 		}
+
 		.colonne:first{
 			padding-right:1%;
 
@@ -155,9 +150,11 @@
 		a {
 			text-decoration: none;
 		}
+
 		/***************************************************************************************
 		footer
 		***************************************************************************************/
+		
 		footer {
 			text-align: center;
 		}
@@ -170,7 +167,7 @@
 		}
 
 		@media screen and (max-width:936px){
-			header{flex-wrap:wrap;}
+			/*header{flex-wrap:wrap;}
 			.rotate10{
 				-webkit-transform: rotate(0deg);
 				transform: rotate(0deg);
@@ -186,10 +183,8 @@
 			.rotate355{
 				-webkit-transform: rotate(0deg);
 				transform: rotate(0deg);
-			}
-			.menu {width:49%;}
-
-			article{ text-align: left;}
+			}*/
+			.menu {width:49%;display:none;}
 		}
 
 		@media screen and (max-width:680px){
@@ -197,8 +192,8 @@
 				width:100%;
 			}
 			.etiquette{
-			background: #FDEED7 ;
-			padding-left:20px;
+				background: #FDEED7;
+				padding-left:20px;
 			}
 		}
 
@@ -206,11 +201,10 @@
 </head>
 <body>
 	<header>
-		
 		<div class="etiquette">
-
 			<h1>Le Biau Jardin</h1>
-			<p>Solenne Briffaud et Bruno Papin<br>
+			<p>
+				Solenne Briffaud et Bruno Papin<br>
 				49130 Saint Jean de la croix<br>
 				<span id="tel">06 52 51 14 07</span>
 			</p>
@@ -222,29 +216,20 @@
 		<div class="menu left">
 			<ul>
 				<li class="rotate10"><a href="#accueil" class="vert">Chambre d'hôte et table végétarienne</a></li>
-
 				<li class="rotate5"><a href="#accueil" class="orange">Ateliers</a></li>
-
 				<li class="rotate355"><a href="#accueil" class="vert">Visite du jardin</a></li>
-
 				<li class="rotate350"><a href="#accueil" class="orange">Pique-nique végétarien et goûter au jardin</a></li>
 			</ul>
 		</div>
 		<div class="menu right">
 			<ul>
 				<li class="rotate350"><a href="#produits" class="orange">Légumes</a></li>
-
 				<li class="rotate355"><a href="#produits" class="vert">Jus de pomme, tisanes</a></li>
-
 				<li class="rotate5"><a href="#produits" class="orange">Plans</a></li>
-
 				<li class="rotate10"><a href="#produits" class="vert">Pestos, vinaigres</a></li>
 			</ul>
-
 		</div>
 	</header>
-
-
 
 	<article>
 		<p class="lettrine">
@@ -264,7 +249,6 @@
 			<h3>JUS DE FRUITS</h3>
 
 			jus de pomme, de raisin<br>
-
 			3€ le litre et 2,50€ la bouteille
 			<h3>TISANES</h3> 
 			Hépatante, Indigène, Costaude, P'tit dèj, Anisée, Nuit étoilée, Inspiration<br>3€ le sachet<br>
@@ -275,7 +259,7 @@
 
 			<h3>"CHAMPAGNES DES FEES" </h3>
 			<img src="jus.jpg" width="200"><br>
-			Limonade de sureau : surette, rosette 3€ la bouteille
+			Limonade de sureau : surette, rosette<br> 3€ la bouteille
 
 			<h3>VINAIGRE</h3>
 			De pomme
@@ -291,7 +275,11 @@
 			<h3>ATELIERS</h3>
 			Autour du thème du jardin. À définir ensemble.
 			<h3>VISITE DU JARDIN</h3>
-		</div>
+
+
+		<div id="id_structure_location"><input id="id_latitude" value="47.411013" type="hidden"><input id="id_longitude" value="-0.569229" type="hidden"><div id="id_address_header" class="block-header">Adresse</div><div id="id_address_map_wrapper"><a href="#" id="id_fullscreen_btn"><i class="icon-resize-full"></i></a><div tabindex="0" style="position: relative;" class="leaflet-container leaflet-fade-anim" id="id_address_map"><div style="transform: translate(0px, 0px);" class="leaflet-map-pane"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div style="" class="leaflet-tile-container leaflet-zoom-animated"></div><div style="" class="leaflet-tile-container leaflet-zoom-animated"><img src="http://b.tile.openstreetmap.org/13/4082/2867.png" style="height: 256px; width: 256px; transform: translate(-53px, -31px);" class="leaflet-tile leaflet-tile-loaded"><img src="http://c.tile.openstreetmap.org/13/4083/2867.png" style="height: 256px; width: 256px; transform: translate(203px, -31px);" class="leaflet-tile leaflet-tile-loaded"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"><img style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate(215px, 116px);" class="leaflet-marker-shadow leaflet-zoom-animated" src="http://static.accueil-paysan.com/js/lib/leaflet/images/marker-shadow.png"></div><div class="leaflet-overlay-pane"></div><div class="leaflet-marker-pane"><img tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate(215px, 116px); z-index: 116;" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" src="http://static.accueil-paysan.com/js/lib/leaflet/images/marker-icon.png"></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a title="Zoom in" href="#" class="leaflet-control-zoom-in">+</a><a title="Zoom out" href="#" class="leaflet-control-zoom-out">-</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"><div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | © <a href="http://www.openstreetmap.org/copyright" title="License">Openstreetmap</a> contributors</div></div><div class="leaflet-bottom leaflet-right"></div></div></div></div>
+
+</div>
 	</article>
 	<footer>
 		Mentions légales
